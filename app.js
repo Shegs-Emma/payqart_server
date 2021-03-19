@@ -32,7 +32,8 @@ app.get('/', (req, res, next) => {
 })
 
 app.post('/', (req, res, next) => {
-    // const payDetails = req.body;
+    // This route wasn't neccessary afterall. It doesn't do anything
+    const payDetails = req.body;
     const totalCartValue = 80500;
     const minDownPayment = (30 / 100) * totalCartValue;
     const shoppingCredit = totalCartValue - minDownPayment;
@@ -43,7 +44,7 @@ app.post('/', (req, res, next) => {
         shoppingCredit
     }
 
-    res.status(200).json(breakdownDetails);
+    // res.status(200).json(breakdownDetails);
 })
 
 app.post('/break', (req, res, next) => {
