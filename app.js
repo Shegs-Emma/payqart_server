@@ -31,7 +31,7 @@ app.use(express.json());
 //     console.log('route hit..')
 // })
 
-app.post('/', (req, res, next) => {
+app.post('/api/', (req, res, next) => {
     // This route wasn't neccessary afterall. It doesn't do anything
     const payDetails = req.body;
     const totalCartValue = 80500;
@@ -47,7 +47,7 @@ app.post('/', (req, res, next) => {
     res.status(200).json(breakdownDetails);
 })
 
-app.post('/break', (req, res, next) => {
+app.post('/api/break', (req, res, next) => {
     const payDetails = req.body;
 
     const totalCartValue = 80500;
