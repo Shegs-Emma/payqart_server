@@ -27,9 +27,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 //========================================MY ROUTES==========================================
-app.get('/', (req, res, next) => {
-    console.log('route hit..')
-})
+// app.get('/', (req, res, next) => {
+//     console.log('route hit..')
+// })
 
 app.post('/', (req, res, next) => {
     // This route wasn't neccessary afterall. It doesn't do anything
@@ -44,7 +44,7 @@ app.post('/', (req, res, next) => {
         shoppingCredit
     }
 
-    // res.status(200).json(breakdownDetails);
+    res.status(200).json(breakdownDetails);
 })
 
 app.post('/break', (req, res, next) => {
