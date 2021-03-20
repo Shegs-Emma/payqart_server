@@ -1,0 +1,3 @@
+# payqart_server
+
+START APPLICATION: NPM RUN DEV
