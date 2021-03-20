@@ -2,7 +2,7 @@ const   express     = require('express'),
         app         = express(),
         cors        = require('cors');
 
-const whitelist = ['http://localhost:3000', 'http://localhost:3001'];
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://payqart-task.herokuapp.com/'];
 const corsOptions = {
     origin: function (origin, callback) {
         // console.log("** Origin of request " + origin);
