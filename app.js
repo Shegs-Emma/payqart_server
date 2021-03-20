@@ -2,7 +2,7 @@ const   express     = require('express'),
         app         = express(),
         cors        = require('cors');
 
-const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://payqart-task.herokuapp.com/'];
+const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'https://payqart-task.herokuapp.com'];
 const corsOptions = {
     origin: function (origin, callback) {
         // console.log("** Origin of request " + origin);
@@ -31,7 +31,7 @@ app.use(express.json());
 //     console.log('route hit..')
 // })
 
-app.post('/api/', (req, res, next) => {
+app.post('/api', (req, res, next) => {
     // This route wasn't neccessary afterall. It doesn't do anything
     const payDetails = req.body;
     const totalCartValue = 80500;
